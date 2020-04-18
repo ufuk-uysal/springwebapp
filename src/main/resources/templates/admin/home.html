@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:th="http://www.thymeleaf.org">
+
+<head>
+<title>Admin Page</title>
+<link rel="stylesheet" type="text/css" th:href="@{/css/home.css}" />
+<link rel="stylesheet"
+	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<script
+	src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script
+	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+	<div class="container">
+		<div class="panel-group" style="margin-top: 40px">
+			<div class="panel panel-primary">
+				<div class="panel-heading">
+					<span th:utext="${userName}"></span>
+				</div>
+			<p class="admin-message-text text-center" th:utext="${adminMessage}"></p>
+				<div class="panel-body">
+					<p>Türkiye'deki koronavirüs salgını 17 Nisan'da açıklanan
+						verilere göre 78 bin 546 kişi de görülürken bin 769 kişi de
+						hayatını kaybetti. Teknoloji içerikli yayın yapan ShiftDelete.Net
+						sitesinin kurucusu ve YouTuber Hakkı Alkan da koronavirüse
+						yakalandığını açıkladı. SOĞUK ALGINLIĞINA BAĞLI HASTALIK
+						YAŞADIĞINI DÜŞÜNDÜ Hakkı Alkan, çektiği YouTube videosunda 6
+						Nisan'da Show TV televizyon ekibi ile birlikte soğuk havada
+						durduğunu bu nedenle hastalandığını anlattı. Soğuk algınlığına
+						bağlı hastalık yaşadığını düşündüğünü söyleyen Alkan, hastaneye
+						gittiğini ve doktorların önerisi üzerine koronavirüs testi
+						yapıldığını belirtti. Yapılan test sonucu gelene kadar ateşi
+						düşmeyen Alkan, yapılan akciğer testinde görülen buzlanma
+						nedeniyle koronavirüs şüphesiyle karantina altına alındığını
+						anlattı. TAT VE KOKU DUYUSUNU KAYBETTİ İlk başlarda ise tat ve
+						koku duyusunu kaybettiğini bu nedenle koronavirüse yakalandığını
+						düşündüğünün de altını çizdi. Bir özel hastanede tedavi gördüğünü
+						anlatan Alkan, yaşadığı tüm süreci, YouTube hesabından takipçileri
+						ile paylaştı.</p>
+				</div>
+			
+			</div>
+		</div>
+
+
+		<form th:action="@{/logout}" method="get">
+			<button class="btn btn-md btn-danger btn-block" name="registration"
+				type="Submit">Logout</button>
+		</form>
+	</div>
+</body>
+</html>
